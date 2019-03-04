@@ -24,13 +24,22 @@ public class Deck{
    		//loop through all faces 1 to 13
    			//add a new TwentyOneCard to the deck
         public Deck(){
-            
+            for(int i = 0; i<SUITS.length; i++){
+                for(int x = 1; x<=13; x++){
+                    cards.add(new Card(SUITS[i], x));
+                }
+            }
         }
 
    
    //make a dealCard() method that returns the top card
-   
+        public String dealCard(){
+            return cards.get(0).toString();
+        }
    //write a shuffle() method
    	//use Colletions.shuffle
    	//reset the top card 
+        public void shuffle(){
+            Collections.shuffle(cards);
+        }
 }
