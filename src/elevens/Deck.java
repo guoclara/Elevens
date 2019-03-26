@@ -24,7 +24,7 @@ public class Deck{
    		//loop through all faces 1 to 13
    			//add a new TwentyOneCard to the deck
         public Deck(){
-        	cards = new ArrayList<Card>(52);
+            cards = new ArrayList<Card>(52);
             for(int i = 0; i<SUITS.length; i++){
                 for(int x = 1; x<=13; x++){
                     cards.add(new BlackJackCard(SUITS[i], x));
